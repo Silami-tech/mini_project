@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/personalInfoFragment">
+
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.example.miniProject.personalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info" >
+        <action
+            android:id="@+id/action_personalInfoFragment_to_universityInfoFragment"
+            app:destination="@id/universityInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/universityInfoFragment"
+        android:name="com.example.miniProject.universityInfoFragment"
+        android:label="fragment_university_info"
+        tools:layout="@layout/fragment_university_info" >
+        <action
+            android:id="@+id/action_universityInfoFragment_to_printDataFragment"
+            app:destination="@id/printDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/printDataFragment"
+        android:name="com.example.miniProject.printDataFragment"
+        android:label="fragment_print_data"
+        tools:layout="@layout/fragment_print_data" >
+        <action
+            android:id="@+id/action_printDataFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+    </fragment>
+</navigation>
